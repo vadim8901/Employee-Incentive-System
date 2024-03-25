@@ -4,15 +4,13 @@ import ru.spb.json.Suggestion;
 
 import java.util.List;
 
+/**
+ * CRUD сервис для предложения пользователя.
+ */
 public interface UserService {
-
-    String CREATE = "/user/suggestion/create";
-    String INDEX = "/user/suggestions/index";
-    String EDIT = "/user/suggestions/edit";
-
     void create(Suggestion suggestion);
 
     List<Suggestion> index(Long userId);
 
-    void edit(Long userId, Suggestion suggestion);
+    void edit(Suggestion suggestion);
 }
